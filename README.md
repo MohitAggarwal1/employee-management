@@ -1,18 +1,27 @@
 # 📅 AttendEase – Employee Attendance Management System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-blue)](#)
-![PHP](https://img.shields.io/badge/PHP-8-blue)
-![MySQL](https://img.shields.io/badge/MySQL-8-orange)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind--CSS-v3-blue)
-![GSAP](https://img.shields.io/badge/GSAP-3.13-brightgreen)
-![Status](https://img.shields.io/badge/Status-Development-yellow)
-![License](https://img.shields.io/badge/License-MIT-blue)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-success?style=for-the-badge)](https://attendease.site.je)
+![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?style=for-the-badge&logo=mysql)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-![AttendEase Landing Page](https://raw.githubusercontent.com/MohitAggarwal1/readme_images/refs/heads/main/employee-attendance/landing.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MohitAggarwal1/readme_images/main/employee-attendance/landing.png" alt="AttendEase Banner" width="100%">
+</p>
 
-🔗 **Live Demo:** # (Leave blank or add link here)  
-📸 **Instagram:** https://www.instagram.com/mohhitaggarwal  
-💼 **LinkedIn:** https://www.linkedin.com/in/mohitaggarwalofficial
+## 🌐 Live Demo
+
+🔗 **Website:** https://attendease.site.je
+
+## 👨‍💻 Connect with Me
+
+- 💼 LinkedIn: https://www.linkedin.com/in/mohitaggarwalofficial
+- 📸 Instagram: https://www.instagram.com/mohhitaggarwal
+- 🐙 GitHub: https://github.com/MohitAggarwal1
 
 ---
 
