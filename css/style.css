@@ -1,0 +1,1561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F6F1EA;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 232, 214, 0.25), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(235, 240, 255, 0.20), transparent 45%),
+        radial-gradient(circle at 60% 80%, rgba(230, 240, 225, 0.18), transparent 45%),
+        linear-gradient(135deg, #F8F4EE 0%, #ECE4DA 100%);
+    margin: 0;
+    min-height: 100vh;    
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+
+
+
+.login-container {
+    width: 350px;
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.12),
+        0 2px 8px rgba(0,0,0,0.05);
+}
+/* 4. Styled inputs to use simple underlines instead of full boxes */
+input{
+    width:100%;
+    padding:12px 5px;
+
+    background:transparent;
+
+    border:none;
+    border-bottom:1.5px solid rgba(0,0,0,0.35);
+
+    color:#2d2d2d;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    outline:none;
+}
+
+input::placeholder{
+    color:#777;
+}
+
+/* Changes placeholder text color to a soft gray/white */
+input::placeholder {
+    color: rgba(76, 75, 75, 0.6);
+}
+
+/* 5. Styled the Login button with a custom purple-to-blue gradient */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #33A58C 0%, #33A58C 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover{
+    background: linear-gradient(90deg, #274368 0%, #274368 100%);
+    opacity: 1;
+    transform: scale(0.98);
+}
+
+
+
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar{
+
+    width:250px;
+
+    padding:30px 20px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(0,0,0,.08);
+
+    box-shadow:6px 0 20px rgba(0,0,0,.08);
+}
+
+
+.sidebar h2{
+    color:#222;
+}
+
+.sidebar ul li a{
+
+    color:#444;
+
+    font-weight:500;
+}
+
+.sidebar ul li a:hover{
+
+    color:#8D6E63;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+
+.sidebar ul li a {
+    color: #2d2d2d;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.sidebar ul li a:hover {
+    color: #8fa8ff;
+}
+
+
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    padding-top: 90px;
+    overflow-y: auto;
+    color:#2d2d2d;
+}
+
+
+
+/* Header */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+
+.top-header h1 {
+    font-size: 32px;
+}
+
+
+.user{
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter: blur(15px);
+
+    border:1px solid rgba(0,0,0,.08);
+
+    color:#333;
+
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+
+.card {
+
+    background: rgba(255,255,255,0.50);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid rgba(0,0,0,0.10);
+
+    box-shadow: 0 12px 24px rgba(0,0,0,0.10);
+
+    transition: all .3s ease;
+}
+
+.card:hover{
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/* Attendance Table */
+
+.attendance{
+
+    margin-top:40px;
+
+    background:rgba(255,255,255,.50);
+
+    backdrop-filter:18px;
+
+    border:1px solid rgba(0,0,0,.10);
+
+    border-radius:20px;
+
+    box-shadow:0 12px 24px rgba(0,0,0,.10);
+
+    padding:25px;
+}
+
+.attendance h2 {
+    margin-bottom: 20px;
+}
+
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+table th,
+table td {
+
+    padding: 15px;
+    text-align: center;
+
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+
+}
+
+
+table th {
+
+    color: #6D4C41;
+
+}
+table td{
+    color:#444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+      LANDING PAGE
+=========================== */
+
+.landing-body{
+
+    background:#f8f5f1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+
+.landing-container{
+
+    width:1200px;
+
+    max-width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+}
+
+
+.landing-left{
+
+    flex:1;
+
+}
+
+
+.logo-box{
+
+    width:250px;
+
+    height:120px;
+
+    background:white;
+
+    /* border:2px dashed #c7c7c7; */
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.logo-box img{
+
+    width:250px;
+
+    height:90px;
+
+    object-fit:contain;
+
+}
+
+/* .logo{
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+} */
+.landing-left h1{
+
+    font-size:56px;
+
+    color:#1f1f1f;
+
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+}
+
+
+.landing-left p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    width:480px;
+
+    max-width:100%;
+
+    margin-bottom:40px;
+
+}
+
+
+.landing-btn{
+
+    display:inline-block;
+
+    padding:15px 38px;
+
+    background:#33A58C;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(216,137,83,.25);
+
+}
+
+.landing-btn:hover{
+
+    background:#274368;
+
+    transform:translateY(-3px);
+
+}
+
+
+.landing-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.illustration-box{
+
+    width:700px;
+
+    height:420px;
+
+    background:rgba(255,255,255,.6);
+
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#999;
+
+    font-size:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    
+
+}
+
+
+.banner{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+
+
+
+
+
+
+/* Attendance Page */
+
+.attendance-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.filter-box select{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    outline:none;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.status{
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    color:white;
+}
+
+.present{
+    background:#33A58C;
+}
+
+.late{
+    background:#f4a62a;
+}
+
+.absent{
+    background:#d9534f;
+}
+
+.halfday{
+    background:#60a5fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   EMPLOYEE MANAGEMENT PAGE
+============================== */
+
+
+.employee-search{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+    background:rgba(255,255,255,0.5);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+.employee-search input{
+
+    flex:1;
+
+    border:none;
+
+    background:white;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+
+
+.employee-search button{
+
+    width:120px;
+
+    margin-top:0;
+
+}
+
+
+
+
+.employee-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+
+.employee-card{
+
+    background:rgba(255,255,255,0.50);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(0,0,0,0.10);
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.10);
+
+    text-align:center;
+
+    transition:0.3s;
+
+}
+
+
+
+.employee-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+.employee-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.employee-card p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.employee-card a{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    background:#33A58C;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+}
+
+
+
+.employee-card a:hover{
+
+    background:#274368;
+
+}
+
+
+
+
+
+
+/* ==============================
+   ADD EMPLOYEE PAGE
+============================== */
+
+.employee-form-container{
+
+    background:rgba(255,255,255,0.50);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.10);
+
+}
+
+.employee-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#274368;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border:2px solid #33A58C;
+
+}
+
+.full-width{
+
+    grid-column:1/3;
+
+}
+
+.form-group textarea{
+
+    resize:none;
+
+}
+
+.button-group{
+
+    grid-column:1/3;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:10px;
+
+}
+
+.button-group button{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#33A58C;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.button-group button:hover{
+
+    background:#274368;
+
+}
+
+.reset-btn{
+
+    background:#888;
+
+}
+
+.reset-btn:hover{
+
+    background:#555;
+
+}
+
+
+
+
+/* ==============================
+   EDIT EMPLOYEE PAGE
+============================== */
+
+.edit-container{
+
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.50);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.10);
+
+}
+
+.edit-container h2{
+
+    color:#274368;
+
+    margin-bottom:25px;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+.search-box button{
+
+    width:140px;
+
+    margin-top:0;
+
+}
+
+
+
+/* ==============================
+   DELETE EMPLOYEE PAGE
+============================== */
+
+.delete-container{
+
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.50);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.10);
+
+}
+
+.delete-container h2{
+
+    color:#274368;
+
+    margin-bottom:25px;
+
+}
+
+.employee-details{
+
+    margin-top:30px;
+
+}
+
+.detail-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+    line-height:2;
+
+}
+
+.delete-btn{
+
+    background:#d9534f;
+
+}
+
+.delete-btn:hover{
+
+    background:#b52b27;
+
+}
+
+
+
+
+
+/* ==============================
+   EMPLOYEE LIST PAGE
+============================== */
+
+.employee-list-container{
+
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.50);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.10);
+
+}
+
+.list-top{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.list-top input{
+
+    flex:1;
+
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+.list-top button{
+
+    width:120px;
+
+    margin-top:0;
+
+}
+
+.employee-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.employee-table th{
+
+    background:#33A58C;
+
+    color:white;
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+.employee-table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #e5e5e5;
+
+    font-size:15px;
+
+}
+
+.employee-table tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.employee-table td:last-child{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+.view-btn{
+
+    background:#3498db;
+
+}
+
+.view-btn:hover{
+
+    background:#2471a3;
+
+}
+
+.edit-btn{
+
+    background:#f39c12;
+
+}
+
+.edit-btn:hover{
+
+    background:#d68910;
+
+}
+
+.delete-btn{
+
+    background:#e74c3c;
+
+}
+
+.delete-btn:hover{
+
+    background:#c0392b;
+
+}
+
+
+/* ===========================
+   PROFILE PAGE
+=========================== */
+
+.profile-container{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.profile-card{
+    width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-image{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #33A58C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 55px;
+}
+
+.profile-card h2{
+    margin: 10px 0 5px;
+    color: #274368;
+}
+
+.profile-card p{
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.status-badge{
+    display: inline-block;
+    background: #33A58C;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile-details{
+    flex: 1;
+}
+
+.profile-section{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-section h3{
+    color: #274368;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #33A58C;
+    padding-bottom: 10px;
+}
+
+.profile-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.profile-grid label{
+    font-weight: bold;
+    color: #274368;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.profile-grid p{
+    background: #f7f7f7;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.full-width{
+    grid-column: 1 / 3;
+}
+
+.profile-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.profile-buttons button{
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #33A58C;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.profile-buttons button:hover{
+    background: #274368;
+}
+
+.password-btn{
+    background: #274368;
+}
+
+.password-btn:hover{
+    background: #1d3150;
+}
+
+/* Helper Badges */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+.halfday {
+    background: #5bc0de;
+}
+
+.status.halfday {
+    background: #5bc0de;
+}
+
+/* Success and Error Alert Boxes */
+.success, .error, .alert {
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+.alert {
+    background-color: #fff3cd;
+    color: #664d03;
+    border: 1px solid #ffecb5;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN MEDIA QUERIES
+   ========================================== */
+
+/* Toggle buttons (hide on desktop) */
+.mobile-menu-toggle,
+.sidebar-close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 1. Toggle Buttons & Header Adjustments */
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #274368;
+        padding: 5px;
+        outline: none;
+        width: auto;
+        margin-top: 0; /* Override default button margins */
+    }
+
+    .top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .top-header h1 {
+        font-size: 22px !important;
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    .top-header .user {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+        white-space: nowrap;
+    }
+
+    /* 2. Sidebar Overlay Backdrop */
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 3. Off-Canvas Mobile Sidebar Drawer */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px; /* hidden off-screen */
+        width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        background: #FFFFFF !important;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+        transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex !important;
+        flex-direction: column;
+        padding: 25px 20px !important;
+        overflow-y: auto;
+    }
+
+    .sidebar.active {
+        left: 0; /* slide in */
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+    }
+
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #274368;
+        padding: 5px;
+        width: auto;
+        margin-top: 0; /* Override default button margins */
+    }
+
+    /* 4. Dashboard Layout & Content Adjustments */
+    .dashboard-container {
+        display: block; /* Change from flex to block */
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px 15px !important;
+        padding-top: 25px !important;
+    }
+
+    /* 5. Responsive Grid Columns (Cards & Profile Grids) */
+    .cards, .employee-cards {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .profile-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .profile-card {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* 6. Form Responsiveness */
+    .employee-form {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .employee-form .form-group {
+        width: 100% !important;
+        grid-column: span 1 / span 1 !important;
+    }
+
+    .form-row, .row {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    /* 7. Global Responsive Table Scrolling */
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .attendance {
+        padding: 15px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    .employee-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+/* Task Table Mobile Responsive Adjustments */
+.mobile-task-title {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-task-title {
+        display: block !important;
+        margin-top: 6px;
+        font-weight: bold;
+        color: #274368;
+        background: rgba(51, 165, 140, 0.1);
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 13px;
+        text-align: left;
+    }
+    .task-title-col {
+        display: none !important;
+    }
+}

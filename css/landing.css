@@ -1,0 +1,241 @@
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+background:#f5fbff;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#33A58C;
+border-radius:20px;
+}
+
+.gradient-bg{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-10;
+
+background:
+linear-gradient(135deg,#ecfeff,#f0fdfa,#ffffff,#eff6ff);
+
+overflow:hidden;
+
+}
+
+.blob{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:.45;
+
+animation:float 14s ease-in-out infinite;
+
+}
+
+.blob1{
+
+width:340px;
+height:340px;
+
+background:#34d399;
+
+top:-60px;
+left:-80px;
+
+}
+
+.blob2{
+
+width:430px;
+height:430px;
+
+background:#60a5fa;
+
+bottom:-120px;
+right:-100px;
+
+animation-delay:4s;
+
+}
+
+.blob3{
+
+width:250px;
+height:250px;
+
+background:#a78bfa;
+
+left:50%;
+top:30%;
+
+animation-delay:2s;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px) translateX(0px);
+}
+
+50%{
+transform:translateY(-50px) translateX(40px);
+}
+
+100%{
+transform:translateY(0px) translateX(0px);
+}
+
+}
+
+.glass{
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.3);
+
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.glow{
+
+box-shadow:
+0 0 30px rgba(51,165,140,.35);
+
+}
+
+.hero-img{
+
+transition:.6s;
+
+}
+
+.hero-img:hover{
+
+transform:
+rotate(-2deg)
+scale(1.04);
+
+}
+
+.floating{
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0);}
+
+}
+
+.hero-title{
+font-size:clamp(2.25rem,6vw,4.5rem);
+line-height:1.1;
+}
+
+.section-title{
+font-size:clamp(2rem,4.5vw,2.75rem);
+font-weight:700;
+color:#274368;
+line-height:1.15;
+}
+
+.card{
+
+transition:.45s;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-12px)
+rotateX(8deg);
+
+box-shadow:0 25px 50px rgba(0,0,0,.1);
+
+}
+
+/* ===========================
+CUSTOM CURSOR
+=========================== */
+@media (max-width: 640px) {
+  .hero-img {
+    animation: none;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  }
+
+  .blob {
+    filter: blur(70px);
+    opacity: 0.32;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: none !important;
+  }
+
+  a, button, select, [role="button"], .card, .feature-card, input[type="submit"], input[type="button"] {
+    cursor: none !important;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    cursor: text !important;
+  }
+
+  .custom-cursor-image {
+    width: 32px;  /* Adjust width to match your cursor image dimensions */
+    height: 32px; /* Adjust height to match your cursor image dimensions */
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s ease;
+
+    /* PLACEHOLDER: Normal Cursor Image */
+    /* Relative to the css/ folder, or use a root path like '/images/cursor-normal.png' */
+    background-image: url('../images/cursor-normal.png'); 
+  }
+
+  .custom-cursor-image.hovered {
+    /* PLACEHOLDER: Link/Hover Cursor Image */
+    /* Relative to the css/ folder, or use a root path like '/images/cursor-link.png' */
+    background-image: url('../images/cursor-link.png');
+  }
+
+  .custom-cursor-active {
+    opacity: 1;
+  }
+}
